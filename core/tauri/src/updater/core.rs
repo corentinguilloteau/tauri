@@ -352,7 +352,7 @@ impl<R: Runtime> UpdateBuilder<R> {
           HttpRequestBuilder::new("GET", &fixed_link)?
             .headers(headers)
             // wait 20sec for the firewall
-            .timeout(20),
+            .timeout(120),
         )
         .await;
 
