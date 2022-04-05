@@ -501,7 +501,7 @@ impl<R: Runtime> Update<R> {
     let req = HttpRequestBuilder::new("GET", self.download_url.as_str())?
       .headers(headers)
       // wait 20sec for the firewall
-      .timeout(20);
+      .timeout(120);
 
     let response = client.send(req).await?;
 
